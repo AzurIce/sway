@@ -4,6 +4,10 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+### Outlooking
+gaps inner 7
+smart_borders on
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -14,7 +18,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+# set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -23,7 +28,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/azurice/Files/__VERYSYNC__/_Pics/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -79,7 +85,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
